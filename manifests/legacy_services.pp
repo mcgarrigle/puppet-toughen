@@ -31,7 +31,6 @@ class toughen::legacy_services (
   }
 
   package { [
-      'inetd',
       'cvs-inetd',
       'telnet-server',
       'rsh-server',
