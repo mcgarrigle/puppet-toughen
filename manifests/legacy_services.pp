@@ -26,9 +26,12 @@ class toughen::legacy_services (
     ensure => $telnet_ensure
   }
 
-  package { 'xinetd':
-    ensure => $xinetd_ensure
-  }
+  # conflicts with other tools that use xinetd
+  # and want to ensure it; removing this concern
+
+  # package { 'xinetd':
+  #   ensure => $xinetd_ensure
+  # }
 
   package { [
       'cvs-inetd',
